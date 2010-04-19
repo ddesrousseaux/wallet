@@ -32,6 +32,13 @@ devises.each { |name, devise|
 average = somme / devises.values.length
 
 
+#puts euro.to_usd
+#puts "La moyenne est : "+ average.to_s
 
-puts euro.to_usd
-puts "La moyenne est : "+ average.to_s
+
+auction = Auction.new
+auction.name= "auction"
+auction.exchange_rate= lambda {
+  130 + rand(20)
+}
+puts auction.randnum
