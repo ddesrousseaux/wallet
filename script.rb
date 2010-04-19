@@ -1,4 +1,6 @@
+require 'value.rb'
 require 'devise.rb'
+require 'auction.rb'
 
 
 euro= Devise.new
@@ -31,4 +33,5 @@ average = somme / devises.values.length
 
 
 
+puts euro.to_usd
 puts "La moyenne est : "+ average.to_s
