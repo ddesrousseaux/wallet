@@ -19,4 +19,16 @@ devises = {
   pound.name => pound,
 }
 
-puts devises
+# sort
+sorted = devises.values.sort_by {|devise| devise.exchange_rate}
+
+# average
+somme = 0.0
+devises.each { |name, devise|
+  somme+= devise.exchange_rate
+}
+average = somme / devises.values.length
+
+
+
+puts "La moyenne est : "+ average.to_s
