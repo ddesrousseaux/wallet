@@ -1,4 +1,7 @@
-puts "Veuillez entrer votre somme en euros"
-euros= gets
-dollars= euros.to_f* 1.3496
-puts dollars
+require 'devise.rb'
+
+d= Devise.new
+d.exchange_rate = 0.88
+d.name = "Euro"
+
+puts d
