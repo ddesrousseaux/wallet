@@ -3,6 +3,7 @@ require 'devise.rb'
 require 'auction.rb'
 
 
+
 euro= Devise.new
 euro.name= "euro"
 euro.exchange_rate= 1.3471
@@ -28,6 +29,7 @@ sorted = devises.values.sort_by {|devise| devise.exchange_rate}
 somme = 0.0
 devises.each { |name, devise|
   somme+= devise.exchange_rate
+  devise.save
 }
 average = somme / devises.values.length
 
@@ -42,3 +44,4 @@ auction.exchange_rate= lambda {
   130 + rand(20)
 }
 puts auction.randnum
+

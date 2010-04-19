@@ -5,4 +5,5 @@ class Auction
   def randnum
     @exchange_rate.call
   end
+
 end
